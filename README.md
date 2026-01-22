@@ -1,1 +1,44 @@
 # Section 5
+
+## Auth service
+
+```
+mkdir auth
+cd auth
+npm init -y
+npm install --save-dev express @types/express typescript ts-node-dev
+npx tsc --init
+```
+
+```
+mkdir src
+```
+
+#### Create auth/src/index.ts
+#### Create auth/Dockerfile
+#### Create auth/.dockerignore
+#### Create infra/k8s/auth-deployment.yaml
+#### Create infra/k8s/auth-service.yaml
+#### Create skaffold.yaml
+
+```
+skaffold dev
+```
+
+#### Create infra/k8s/ingress-service.yaml
+
+```
+sudo nano /etc/hosts
+```
+
+#### /etc/hosts
+
+```
+...
+
+127.0.0.1 tickets.store
+```
+
+```
+open http://tickets.store/v1/users/current
+```
