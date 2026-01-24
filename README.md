@@ -50,3 +50,11 @@ open http://tickets.store/v1/users/current
 #### Create auth/src/routes/users.ts
 #### Create auth/src/routes/sessions.ts
 #### Update auth/src/index.ts
+
+
+```
+cd auth
+npm install express-validator
+```
+
+#### Add validation auth/src/routes/users.ts
