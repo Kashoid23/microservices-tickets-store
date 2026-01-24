@@ -42,3 +42,11 @@ sudo nano /etc/hosts
 ```
 open http://tickets.store/v1/users/current
 ```
+
+# Section 7
+
+## Response Normalization
+
+#### Create auth/src/routes/users.ts
+#### Create auth/src/routes/sessions.ts
+#### Update auth/src/index.ts
