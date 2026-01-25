@@ -47,14 +47,20 @@ open http://tickets.store/v1/users/current
 
 ## Response Normalization
 
-#### Create auth/src/routes/users.ts
-#### Create auth/src/routes/sessions.ts
-#### Update auth/src/index.ts
-
+#### Create router auth/src/routes/users.ts
+#### Create router auth/src/routes/sessions.ts
+#### Update to use routers auth/src/index.ts
 
 ```
 cd auth
 npm install express-validator
 ```
 
-#### Add validation auth/src/routes/users.ts
+#### Add body validation auth/src/routes/users.ts
+#### Create abstract error class auth/src/errors/custom-error.ts
+#### Create middleware auth/src/middlewares/error-handler.ts
+#### Create custom error class auth/src/errors/request-validation-error.ts
+#### Create custom error class auth/src/errors/database-connection-error.ts
+#### Create custom error class auth/src/errors/not-found-error.ts
+#### Init error handler middleware auth/src/index.ts
+#### Update to throw errors auth/src/routes/users.ts
