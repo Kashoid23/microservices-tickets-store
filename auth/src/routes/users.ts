@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 
 import { RequestValidationError } from '../errors/request-validation-error';
-import { DatabaseConnectionError } from '../errors/database-connection-error';
 
 const router = express.Router();
 
@@ -19,8 +18,6 @@ router.post('/v1/users', [
     if (!errors.isEmpty()) {
         throw new RequestValidationError(errors.array());
     }
-
-    throw new DatabaseConnectionError();
 
     res.send('User created');
 });

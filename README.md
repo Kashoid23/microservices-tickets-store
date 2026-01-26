@@ -63,3 +63,29 @@ npm install express-validator
 #### [Create custom error class auth/src/errors/not-found-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/not-found-error.ts)
 #### [Init error handler middleware auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/index.ts)
 #### [Update to throw errors auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/routes/users.ts)
+
+# Section 8
+
+## Connecting to MongoDB
+
+Used Docker Image: https://hub.docker.com/_/mongo
+
+#### Create infra/k8s/auth-mongo-deployment.yaml
+
+Default port for MongoDB is 27017
+
+#### Create infra/k8s/auth-mongo-service.yaml
+
+```
+docker pull mongo
+skaffold dev
+```
+
+```
+cd auth
+npm install mongoose @types/mongoose
+```
+
+mongodb://username:password@hostname:port/database_name
+
+#### Connect MongoDB instance auth/src/index.ts
