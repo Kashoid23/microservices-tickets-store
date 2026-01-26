@@ -46,20 +46,20 @@ open http://tickets.store/v1/users/current
 
 ## Response Normalization
 
-#### Create router auth/src/routes/users.ts
-#### Create router auth/src/routes/sessions.ts
-#### Update to use routers auth/src/index.ts
+#### [Create router auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/routes/users.ts)
+#### [Create router auth/src/routes/sessions.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/routes/sessions.ts)
+#### [Update to use routers auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/index.ts)
 
 ```
 cd auth
 npm install express-validator
 ```
 
-#### Add body validation auth/src/routes/users.ts
-#### Create abstract error class auth/src/errors/custom-error.ts
-#### Create middleware auth/src/middlewares/error-handler.ts
-#### Create custom error class auth/src/errors/request-validation-error.ts
-#### Create custom error class auth/src/errors/database-connection-error.ts
-#### Create custom error class auth/src/errors/not-found-error.ts
-#### Init error handler middleware auth/src/index.ts
-#### Update to throw errors auth/src/routes/users.ts
+#### [Add body validation auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/af296166fa7e86ca999b6ef2a81c7a5ab570e818/auth/src/routes/users.ts)
+#### [Create abstract error class auth/src/errors/custom-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/custom-error.ts)
+#### [Create middleware auth/src/middlewares/error-handler.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/middlewares/error-handler.ts)
+#### [Create custom error class auth/src/errors/request-validation-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/request-validation-error.ts)
+#### [Create custom error class auth/src/errors/database-connection-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/database-connection-error.ts)
+#### [Create custom error class auth/src/errors/not-found-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/not-found-error.ts)
+#### [Init error handler middleware auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/index.ts)
+#### [Update to throw errors auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/routes/users.ts)
