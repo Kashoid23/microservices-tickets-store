@@ -90,11 +90,11 @@ mongodb://username:password@hostname:port/database_name
 
 #### Connect MongoDB instance auth/src/index.ts
 
-Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that maps code objects to MongoDB documents.
-Mongoose Schema - defines the structure of the document, default values, validators, etc. It is the blueprint for the data.
-Mongoose Model - a constructor compiled from Schema definitions. It is used to create and read documents from the underlying MongoDB database.
-Mongoose Document - an instance of a Model, representing a single record in the database.
-Mongoose Collection - a grouping of MongoDB documents (analogous to a table in relational databases).
+- Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that maps code objects to MongoDB documents.
+- Mongoose Schema - defines the structure of the document, default values, validators, etc. It is the blueprint for the data.
+- Mongoose Model - a constructor compiled from Schema definitions. It is used to create and read documents from the underlying MongoDB database.
+- Mongoose Document - an instance of a Model, representing a single record in the database.
+- Mongoose Collection - a grouping of MongoDB documents (analogous to a table in relational databases).
 
 Common Data Types
 
