@@ -63,3 +63,53 @@ npm install express-validator
 #### [Create custom error class auth/src/errors/not-found-error.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/errors/not-found-error.ts)
 #### [Init error handler middleware auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/index.ts)
 #### [Update to throw errors auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0209591ba58c1c8e1336d63a4b35b5258188a7ae/auth/src/routes/users.ts)
+
+# Section 8
+
+## Connecting to MongoDB
+
+Used Docker Image: https://hub.docker.com/_/mongo
+
+#### Create infra/k8s/auth-mongo-deployment.yaml
+
+Default port for MongoDB is 27017
+
+#### Create infra/k8s/auth-mongo-service.yaml
+
+```
+docker pull mongo
+skaffold dev
+```
+
+```
+cd auth
+npm install mongoose @types/mongoose
+```
+
+mongodb://username:password@hostname:port/database_name
+
+#### Connect MongoDB instance auth/src/index.ts
+
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that maps code objects to MongoDB documents.
+Mongoose Schema - defines the structure of the document, default values, validators, etc. It is the blueprint for the data.
+Mongoose Model - a constructor compiled from Schema definitions. It is used to create and read documents from the underlying MongoDB database.
+Mongoose Document - an instance of a Model, representing a single record in the database.
+Mongoose Collection - a grouping of MongoDB documents (analogous to a table in relational databases).
+
+Common Data Types
+
+- String
+- Number
+- Date
+- Buffer (Binary data)
+- Boolean
+- Mixed (An {} type)
+- ObjectId (Unique identifier, _id)
+- Array
+- Decimal128
+
+#### Create Mongoose Schema and Model auth/src/models/user.ts
+#### Handle email already exists error auth/src/errors/bad-request-error.ts
+#### Update POST v1/users router auth/src/routes/users.ts
+#### Create Password helper for hashing and comparing auth/src/helpers/password.ts
+#### Set hashed password before saving to DB auth/src/models/user.ts
