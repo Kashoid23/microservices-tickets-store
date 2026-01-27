@@ -111,3 +111,5 @@ Common Data Types
 #### Create Mongoose Schema and Model auth/src/models/user.ts
 #### Handle email already exists error auth/src/errors/bad-request-error.ts
 #### Update POST v1/users router auth/src/routes/users.ts
+#### Create Password helper for hashing and comparing auth/src/helpers/password.ts
+#### Set hashed password before saving to DB auth/src/models/user.ts
