@@ -127,7 +127,7 @@ Session-based authentication is the traditional and most widely used method for 
 - Backend and frontend share the same domain
 - You want maximum security with minimal complexity
 
-<img width="630" height="450" alt="image" src="https://github.com/user-attachments/assets/e99f311f-8b9c-4b29-a033-b25abf87205f" />
+<kbd><img width="630" height="450" alt="image" src="https://github.com/user-attachments/assets/e99f311f-8b9c-4b29-a033-b25abf87205f" /></kbd>
 
 #### Token-based Authentication
 
@@ -145,7 +145,7 @@ For Server-Side Rendering (SSR) applications, the most secure and effective way 
 - You need stateless authentication
 - You expect horizontal scaling
 
-<img width="640" height="460" alt="image" src="https://github.com/user-attachments/assets/76eb71d0-4fa9-4c8e-a526-d374c6829841" />
+<kbd><img width="640" height="460" alt="image" src="https://github.com/user-attachments/assets/76eb71d0-4fa9-4c8e-a526-d374c6829841" /></kbd>
 
 #### OAuth 2.0 Authentication
 
