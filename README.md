@@ -114,3 +114,58 @@ Common Data Types
 #### Update POST v1/users router auth/src/routes/users.ts
 #### Create Password helper for hashing and comparing auth/src/helpers/password.ts
 #### Set hashed password before saving to DB auth/src/models/user.ts
+
+# Section 9
+
+## Authentication strategies and options
+
+#### Session-based Authentication
+
+Session-based authentication is the traditional and most widely used method for web applications. The server stores session data, and the client identifies itself using a session ID stored in cookies.
+
+- You are building a traditional web app
+- Backend and frontend share the same domain
+- You want maximum security with minimal complexity
+
+<img width="630" height="450" alt="image" src="https://github.com/user-attachments/assets/e99f311f-8b9c-4b29-a033-b25abf87205f" />
+
+#### Token-based Authentication
+
+JWT authentication uses self-contained tokens that are issued by the server and stored on the client. The token is sent with every request for authentication.
+
+> Authorization: Bearer header.payload.signature
+
+OR
+
+> x-access-token: header.payload.signature
+
+For Server-Side Rendering (SSR) applications, the most secure and effective way to store JWTs is using HttpOnly, Secure cookies. This approach allows the server to access the token for initial rendering while protecting it from XSS (Cross-Site Scripting) attacks, as JavaScript cannot access the cookie. 
+
+- You are building APIs or microservices
+- You need stateless authentication
+- You expect horizontal scaling
+
+<img width="640" height="460" alt="image" src="https://github.com/user-attachments/assets/76eb71d0-4fa9-4c8e-a526-d374c6829841" />
+
+#### OAuth 2.0 Authentication
+
+OAuth 2.0 is an industry-standard authorization framework used for delegated access. It allows users to grant access to third-party applications without sharing credentials.
+
+- You need third-party login
+- You have multiple client types
+- You are building enterprise-grade systems
+
+## Comparison
+
+#### Security
+
+<img width="639" height="468" alt="image" src="https://github.com/user-attachments/assets/dcf4c438-0092-4f79-b422-46ed6f734580" />
+
+#### Performance
+
+<img width="635" height="338" alt="image" src="https://github.com/user-attachments/assets/6dea9bbf-33a0-4590-b7ff-4bf24e3d48c6" />
+
+#### Complexity
+
+<img width="635" height="270" alt="image" src="https://github.com/user-attachments/assets/bf4a70fc-3cf3-4747-937d-021e6d737c83" />
+
