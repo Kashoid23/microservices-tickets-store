@@ -47,8 +47,9 @@ open http://tickets.store/v1/users/current
 ## Response Normalization
 
 #### [Create router auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/routes/users.ts)
-#### [Create router auth/src/routes/sessions.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/routes/sessions.ts)
-#### [Update to use routers auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/40bde82bc62d8f92894a1cb0387d9bbac99b8a7a/auth/src/index.ts)
+#### [Create router auth/src/routes/login.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0e0abd007863c975d1e55a80f4d74a3e284ac111/auth/src/routes/login.ts)
+#### [Create router auth/src/routes/logout.ts](https://github.com/Kashoid23/microservices-tickets-store/blob/0e0abd007863c975d1e55a80f4d74a3e284ac111/auth/src/routes/logout.ts)
+#### Import routers to auth/src/index.ts
 
 ```
 cd auth
