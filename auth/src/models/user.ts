@@ -7,6 +7,7 @@ interface UserAttrs {
 }
 
 interface UserDocument extends mongoose.Document {
+	id: string;
 	email: string;
 	password: string;
 	createdAt: Date;

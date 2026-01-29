@@ -170,3 +170,16 @@ OAuth 2.0 is an industry-standard authorization framework used for delegated acc
 
 <img width="635" height="270" alt="image" src="https://github.com/user-attachments/assets/bf4a70fc-3cf3-4747-937d-021e6d737c83" />
 
+```
+cd auth
+npm i cookie-session @types/cookie-session
+```
+
+#### Use cookieSession for auth/src/index.ts
+
+```
+cd auth
+npm i jsonwebtoken @types/jsonwebtoken
+```
+
+#### Generate a JWT auth/src/routes/users.ts
