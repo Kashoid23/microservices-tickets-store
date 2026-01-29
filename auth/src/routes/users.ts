@@ -36,7 +36,7 @@ router.post('/v1/users', [
     const userJwt = jwt.sign({
         id: newUser.id,
         email: newUser.email
-    }, '<JWT_SECRET>'!);
+    }, process.env.JWT_SIGN!);
 
     req.session = { jwt: userJwt };
 

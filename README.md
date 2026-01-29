@@ -170,6 +170,8 @@ OAuth 2.0 is an industry-standard authorization framework used for delegated acc
 
 <img width="635" height="270" alt="image" src="https://github.com/user-attachments/assets/bf4a70fc-3cf3-4747-937d-021e6d737c83" />
 
+#### Add session support
+
 ```
 cd auth
 npm i cookie-session @types/cookie-session
@@ -183,3 +185,14 @@ npm i jsonwebtoken @types/jsonwebtoken
 ```
 
 #### Generate a JWT auth/src/routes/users.ts
+
+#### Create a Kubernetes secret
+
+```
+kubectl create secret generic jwt-secret --from-literal=JWT_SIGN=a4Doo52
+kubectl get secrets
+```
+
+#### Set ENV var referred to Kubernetes secrets infra/k8s/auth-deployment.yaml
+
+#### Read JWT_SIGN ENV var auth/src/routes/users.ts

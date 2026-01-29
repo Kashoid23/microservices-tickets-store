@@ -15,3 +15,9 @@ spec:
       containers:
         - name: auth
           image: kashoid/tickets-store-auth
+          env:
+            - name: JWT_SIGN
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_SIGN
