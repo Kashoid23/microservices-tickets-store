@@ -3,7 +3,8 @@ import { json } from 'body-parser';
 import mongoose from 'mongoose';
 
 import { userRouter } from './routes/users';
-import { sessionRouter } from './routes/sessions';
+import { loginRouter } from './routes/login';
+import { logoutRouter } from './routes/logout';
 import { errorHandler } from './middlewares/error-handler';
 import { NotFoundError } from './errors/not-found-error';
 import { DatabaseConnectionError } from './errors/database-connection-error';
@@ -12,7 +13,8 @@ const app = express();
 app.use(json());
 
 app.use(userRouter);
-app.use(sessionRouter);
+app.use(loginRouter);
+app.use(logoutRouter);
 
 app.use((req, res) => {
   throw new NotFoundError();
