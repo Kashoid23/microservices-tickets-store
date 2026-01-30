@@ -3,23 +3,14 @@ import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
 
 import { validateRequest } from '../middlewares/validate-request';
+import { currentUser } from '../middlewares/current-user';
 import { BadRequestError } from '../errors/bad-request-error';
 import { User } from '../models/user';
 
 const router = express.Router();
 
-router.get('/v1/users/current', (req, res) => {
-    if (!req.session?.jwt) {
-        return res.status(401).send({ currentUser: null });
-    }
-
-    try {
-        const payload = jwt.verify(req.session.jwt, process.env.JWT_SIGN!);
-
-        res.status(200).send({ currentUser: payload });
-    } catch (err) {
-        res.status(401).send({ currentUser: null });
-    }
+router.get('/v1/users/current', currentUser, (req, res) => {
+    res.send({ currentUser: req.currentUser || null });
 });
 
 router.post('/v1/users', [
