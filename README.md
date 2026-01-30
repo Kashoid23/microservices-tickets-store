@@ -219,6 +219,10 @@ kubectl get secrets
 
 #### Use Current user middleware auth/src/routes/users.ts
 
+#### Create unauthorized error class auth/src/errors/unathorized-error.ts
+
+#### Create authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts
+
 ## Logout
 
 #### Add v1/logout path to infra/k8s/ingress-service.yaml
