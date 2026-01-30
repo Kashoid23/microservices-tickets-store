@@ -198,3 +198,11 @@ kubectl get secrets
 #### [Read JWT_SIGN ENV var auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
 #### Formatting POST v1/users response auth/src/models/user.ts
+
+#### Add v1/login path to infra/k8s/ingress-service.yaml
+
+#### Create shared validateRequest middleware auth/src/middlewares/validate-request.ts
+
+#### Init validateRequest middleware auth/src/routes/users.ts
+
+#### Check email, compare password, set JWT then return user auth/src/routes/login.ts
