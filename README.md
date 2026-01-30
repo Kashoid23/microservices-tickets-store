@@ -110,6 +110,8 @@ Common Data Types
 - Array
 - Decimal128
 
+## Signup
+
 #### [Create Mongoose Schema and Model auth/src/models/user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/159fb0224dcc7862dbe82d75aa2538d4ea4aa3a3#diff-f5f12a593a24caa2e2be6ca829c14399b70f7034f17ebecae45276505408cca8)
 #### [Handle email already exists error auth/src/errors/bad-request-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/159fb0224dcc7862dbe82d75aa2538d4ea4aa3a3#diff-00e6b029ee1e36f2fd68472cfe1ca4599e0f146140888068208c6614f59d3033)
 #### [Update POST v1/users router auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/159fb0224dcc7862dbe82d75aa2538d4ea4aa3a3#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
@@ -156,7 +158,7 @@ OAuth 2.0 is an industry-standard authorization framework used for delegated acc
 - You have multiple client types
 - You are building enterprise-grade systems
 
-## Comparison
+## Authentication strategies comparison
 
 #### Security
 
@@ -199,6 +201,8 @@ kubectl get secrets
 
 #### Formatting POST v1/users response auth/src/models/user.ts
 
+## Login
+
 #### Add v1/login path to infra/k8s/ingress-service.yaml
 
 #### Create shared validateRequest middleware auth/src/middlewares/validate-request.ts
@@ -206,3 +210,7 @@ kubectl get secrets
 #### Init validateRequest middleware auth/src/routes/users.ts
 
 #### Check email, compare password, set JWT then return user auth/src/routes/login.ts
+
+## Current user
+
+#### Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts

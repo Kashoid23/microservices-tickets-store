@@ -9,7 +9,17 @@ import { User } from '../models/user';
 const router = express.Router();
 
 router.get('/v1/users/current', (req, res) => {
-    res.send('Current user');
+    if (!req.session?.jwt) {
+        return res.status(401).send({ currentUser: null });
+    }
+
+    try {
+        const payload = jwt.verify(req.session.jwt, process.env.JWT_SIGN!);
+
+        res.status(200).send({ currentUser: payload });
+    } catch (err) {
+        res.status(401).send({ currentUser: null });
+    }
 });
 
 router.post('/v1/users', [
