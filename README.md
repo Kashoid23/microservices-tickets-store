@@ -214,3 +214,9 @@ kubectl get secrets
 ## Current user
 
 #### Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts
+
+## Logout
+
+#### Add v1/logout path to infra/k8s/ingress-service.yaml
+
+#### Destroying a session auth/src/routes/logout.ts
