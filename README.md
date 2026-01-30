@@ -199,32 +199,32 @@ kubectl get secrets
 
 #### [Read JWT_SIGN ENV var auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
-#### Formatting POST v1/users response auth/src/models/user.ts
+#### [Formatting POST v1/users response auth/src/models/user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/57b52fb5103f4002bc0ace51cb5303f2c7e1a8d7#diff-f5f12a593a24caa2e2be6ca829c14399b70f7034f17ebecae45276505408cca8)
 
 ## Login
 
-#### Add v1/login path to infra/k8s/ingress-service.yaml
+#### [Add v1/login path to infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
 
-#### Create shared validateRequest middleware auth/src/middlewares/validate-request.ts
+#### [Create shared validateRequest middleware auth/src/middlewares/validate-request.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-02706e89457f1d0459edc646920d2e2202ea1ae6aed9de555b11fb704e239521)
 
-#### Init validateRequest middleware auth/src/routes/users.ts
+#### [Init validateRequest middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
-#### Check email, compare password, set JWT then return user auth/src/routes/login.ts
+#### [Check email, compare password, set JWT then return user auth/src/routes/login.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-df9c77d948cce73ae30ce968c3134d7f3e3eeac30b320ebe394434735dc51ba0)
 
 ## Current user
 
-#### Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts
+#### [Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/80a6d58061aa74576b0578f478c868efee6e0997#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
-#### Create Current user middleware auth/src/middlewares/current-user.ts
+#### [Create Current user middleware auth/src/middlewares/current-user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-8bcd7e79e2ce5408d9fc3196a06e09d6a59467bbdde6c6e4665ceae2d17970a9)
 
-#### Use Current user middleware auth/src/routes/users.ts
+#### [Use Current user middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
-#### Create unauthorized error class auth/src/errors/unathorized-error.ts
+#### [Create unauthorized error class auth/src/errors/unathorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
 
-#### Create authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts
+#### [Create authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-0999c87b30f8efd3998ec467880bcd9857fac96ed8aa370809f065431a5d0a0e)
 
 ## Logout
 
-#### Add v1/logout path to infra/k8s/ingress-service.yaml
+#### [Add v1/logout path to infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
 
-#### Destroying a session auth/src/routes/logout.ts
+#### [Destroying a session auth/src/routes/logout.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-b2af90c0eb5bfdae3a451a316cfb180eba9348514028e59f2f7e932ac6e183e0)
