@@ -196,3 +196,5 @@ kubectl get secrets
 #### [Set ENV var referred to Kubernetes secrets infra/k8s/auth-deployment.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-f14c2afe65dfa9fe19e5cc32ac5f5e704a13ff5fb521188f81389639a52fadd0)
 
 #### [Read JWT_SIGN ENV var auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
+
+#### Formatting POST v1/users response auth/src/models/user.ts

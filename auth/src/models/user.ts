@@ -1,9 +1,17 @@
-import mongoose from "mongoose";
+import mongoose, { Types } from "mongoose";
 import { Password } from "../helpers/password";
 
 interface UserAttrs {
   	email: string;
   	password: string;
+}
+
+interface UserJSON {
+	id?: Types.ObjectId;
+	email: string;
+	_id?: Types.ObjectId;
+	password?: string;
+	__v?: number;
 }
 
 interface UserDocument extends mongoose.Document {
@@ -26,6 +34,15 @@ const userSchema = new mongoose.Schema({
 	password: {
 		type: String,
 		required: true
+	},
+}, {
+	toJSON: {
+		transform(doc: UserDocument, ret: UserJSON) {
+			ret.id = ret._id!;
+			delete ret._id;
+			delete ret.password;
+			delete ret.__v;
+		}
 	}
 });
 
