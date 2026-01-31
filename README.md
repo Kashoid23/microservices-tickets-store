@@ -219,9 +219,9 @@ kubectl get secrets
 
 #### [Use Current user middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 
-#### [Create unauthorized error class auth/src/errors/unathorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
+#### [Create UnauthorizedError class auth/src/errors/unathorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
 
-#### [Create authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-0999c87b30f8efd3998ec467880bcd9857fac96ed8aa370809f065431a5d0a0e)
+#### [Create Authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-0999c87b30f8efd3998ec467880bcd9857fac96ed8aa370809f065431a5d0a0e)
 
 ## Logout
 
