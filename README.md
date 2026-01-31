@@ -228,3 +228,5 @@ kubectl get secrets
 #### [Add v1/logout path to infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
 
 #### [Destroying a session auth/src/routes/logout.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-b2af90c0eb5bfdae3a451a316cfb180eba9348514028e59f2f7e932ac6e183e0)
+
+# Section 10
