@@ -6,7 +6,7 @@
 mkdir auth
 cd auth
 npm init -y
-npm install --save-dev express @types/express typescript ts-node-dev
+npm install express @types/express typescript ts-node-dev
 npx tsc --init
 ```
 
@@ -230,3 +230,33 @@ kubectl get secrets
 #### [Destroying a session auth/src/routes/logout.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-b2af90c0eb5bfdae3a451a316cfb180eba9348514028e59f2f7e932ac6e183e0)
 
 # Section 10
+
+#### Prepare reusable express app code for test ENV auth/src/app.ts
+
+#### Update auth/src/index.ts
+
+#### Install <b>supertest</b> library to make fake requests to express app and <b>mongodb-memory-server</b> to start in-memory copy of MongoDB
+
+```
+cd auth
+npm i --save-dev jest ts-jest @types/jest supertest @types/supertest mongodb-memory-server
+```
+
+#### Avoid installing development dependencies by adding --omit=dev to auth/Dockerfile
+
+#### Include jest type auth/tsconfig.json
+
+#### Add test script and config to run jest auth/package.json
+
+#### Test ENV setup auth/src/tests/setup.ts
+
+#### Cover users routes with tests auth/src/routes/users.test.ts
+
+#### Cover login route with tests auth/src/routes/login.test.ts
+
+#### Cover logout route with tests auth/src/routes/logout.test.ts
+
+```
+cd auth
+npm run test
+```
