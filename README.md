@@ -260,3 +260,11 @@ npm i --save-dev jest ts-jest @types/jest supertest @types/supertest mongodb-mem
 cd auth
 npm run test
 ```
+
+#### Define global signup helper to reduce tests code auth/src/tests/setup.ts
+
+#### Reuse global signup helper for auth/src/routes/users.test.ts
+
+#### Reuse global signup helper for auth/src/routes/login.test.ts
+
+#### Reuse global signup helper for auth/src/routes/logout.test.ts

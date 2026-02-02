@@ -16,12 +16,7 @@ describe('Current user route', () => {
         const email = 'test@example.com';
         const password = 'password';
 
-        const signupResponse = await request(app)
-            .post('/v1/users')
-            .send({ email, password })
-            .expect(201);
-
-        const cookie = signupResponse.get('Set-Cookie') || [];
+        const cookie = await signup(email, password);
 
         const response = await request(app)
             .get('/v1/users/current')
@@ -100,10 +95,7 @@ describe('User create route', () => {
         const email = 'test@example.com';
         const password = 'password';
 
-        await request(app)
-            .post('/v1/users')
-            .send({ email, password })
-            .expect(201);
+        await signup(email, password);
 
         const response = await request(app)
             .post('/v1/users')

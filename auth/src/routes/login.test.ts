@@ -19,10 +19,7 @@ describe('Login route', () => {
         const email = 'test@example.com';
         const password = 'password';
 
-        await request(app)
-            .post('/v1/users')
-            .send({ email, password })
-            .expect(201);
+        await signup(email, password);
 
         const response = await request(app)
             .post('/v1/login')
@@ -39,10 +36,7 @@ describe('Login route', () => {
         const email = 'test@example.com';
         const password = 'password';
 
-        await request(app)
-            .post('/v1/users')
-            .send({ email, password })
-            .expect(201);
+        await signup(email, password);
 
         const response = await request(app)
             .post('/v1/login')

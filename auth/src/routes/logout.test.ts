@@ -4,15 +4,7 @@ import { app } from '../app';
 
 describe('Logout route', () => {
     it('returns a success message and clears the session cookie after logging out', async () => {
-        const email = 'test@example.com';
-        const password = 'password';
-
-        const signupResponse = await request(app)
-            .post('/v1/users')
-            .send({ email, password })
-            .expect(201);
-
-        const signupCookie = signupResponse.get('Set-Cookie') || [];
+        const signupCookie = await signup();
 
         expect(signupCookie[0]).not.toMatch(/session=;/);
 

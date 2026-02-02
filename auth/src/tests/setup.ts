@@ -1,6 +1,13 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 import { beforeAll, beforeEach, afterAll } from '@jest/globals';
+import request from 'supertest';
+
+import { app } from '../app';
+
+declare global {
+    function signup(email?: string, password?: string): Promise<string[]>;
+}
 
 let mongo: MongoMemoryServer;
 
@@ -30,3 +37,20 @@ afterAll(async () => {
 
     await mongoose.connection.close();
 });
+
+global.signup = async (email?: string, password?: string) => {
+    const userEmail = email || 'test@example.com';
+    const userPassword = password || 'password';
+
+    const response = await request(app)
+        .post('/v1/users')
+        .send({
+            email: userEmail,
+            password: userPassword
+        })
+        .expect(201);
+
+    const cookie = response.get('Set-Cookie') || [];
+
+    return cookie;
+};
