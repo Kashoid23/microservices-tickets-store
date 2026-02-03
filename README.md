@@ -282,7 +282,7 @@ npm init -y
 npm install react react-dom next
 ```
 
-#### Create client/.gitignore
+#### [Create client/.gitignore](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-f8fc230f40372bc0cc3003a0913de478a6b6cd220762e6896942c383730974c8)
 
 Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.
 
@@ -290,12 +290,12 @@ Next.js uses file-system routing, which means the routes in your application are
 mkdir app
 ```
 
-#### Create the root layout. It's required and must contain the <html> and <body> tags. client/app/layout.js
+#### [Create the root layout client/app/layout.js. It's required and must contain the <html> and <body> tags](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-e1d364b134ff71aaa4eecaa01154f95274456b1d4a0db646c896ace897f65f26)
 
-#### Create a home page client/app/page.js with some initial content
+#### [Create a home page client/app/page.js with some initial content](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-402ae0182ad4d90e6bf74e18b0d99bc0b61490f6abcb59b45d3b1f6cca3ba4f4)
 
 Both layout.js and page.js will be rendered when the user visits the root of application (/).
 
-#### Add dev script to run next server client/package.json
+#### [Add dev script to run next server client/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-1846122c2c83a486a3693f7966aa522c34cf489f674185c4da0d9221683fd81f)
 
 > next dev: starts the development server using Turbopack (default bundler)
