@@ -231,9 +231,9 @@ kubectl get secrets
 
 # Section 10
 
-#### Prepare reusable express app code for test ENV auth/src/app.ts
+#### [Prepare reusable express app code for test ENV auth/src/app.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-5822d1c0ff56e61050b5e5a794c8a243db57453fca808d90b06309d522378dc8)
 
-#### Update auth/src/index.ts
+#### [Update auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-0b5cb0a52d11370c3283ace8d2013a154bae71e8285809dd11eb4c4b1f6d34ab)
 
 #### Install <b>supertest</b> library to make fake requests to express app and <b>mongodb-memory-server</b> to start in-memory copy of MongoDB
 
@@ -242,32 +242,32 @@ cd auth
 npm install --save-dev jest ts-jest @types/jest supertest @types/supertest mongodb-memory-server
 ```
 
-#### Avoid installing development dependencies by adding --omit=dev to auth/Dockerfile
+#### [Avoid installing development dependencies by adding --omit=dev to auth/Dockerfile](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-e8d8092a4a6211281e55aba080af4f1802dffa3c5fc26fecd152edb378839668)
 
-#### Include jest type auth/tsconfig.json
+#### [Include jest type auth/tsconfig.json](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-f264533bb08b34faaaddc7a524916a8ea45d2a084c2e1835faf121370d3e99b1)
 
-#### Add test script and config to run jest auth/package.json
+#### [Add test script and config to run jest auth/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-1a97c5e9f4f20ea92b2d3531765f1d9ab47e3f5551f2b2083180963d0791258e)
 
-#### Test ENV setup auth/src/tests/setup.ts
+#### [Test ENV setup auth/src/tests/setup.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-9d8d059495563ba61f40bdfdf36f12ed44f0b6a0d7d243d82c4653b568c86e47)
 
-#### Cover users routes with tests auth/src/routes/users.test.ts
+#### [Cover users routes with tests auth/src/routes/users.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-57e1fd0c09c6564f67bb7c0b8a07f2225bc3109f50c8bf76e6e0e54636e2712a)
 
-#### Cover login route with tests auth/src/routes/login.test.ts
+#### [Cover login route with tests auth/src/routes/login.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-e6688430a19a9c30f6bd18710b1cebcee430ae563e449f1a28223912be7f0f75)
 
-#### Cover logout route with tests auth/src/routes/logout.test.ts
+#### [Cover logout route with tests auth/src/routes/logout.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-0986c2c797aa46a34a1f03bc84affced3351b78850b94b247dd47f2583edce87)
 
 ```
 cd auth
 npm run test
 ```
 
-#### Define global signup helper to reduce tests code auth/src/tests/setup.ts
+#### [Define global signup helper to reduce duplicated tests code auth/src/tests/setup.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-9d8d059495563ba61f40bdfdf36f12ed44f0b6a0d7d243d82c4653b568c86e47)
 
-#### Reuse global signup helper for auth/src/routes/users.test.ts
+#### [Reuse global signup helper for auth/src/routes/users.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-57e1fd0c09c6564f67bb7c0b8a07f2225bc3109f50c8bf76e6e0e54636e2712a)
 
-#### Reuse global signup helper for auth/src/routes/login.test.ts
+#### [Reuse global signup helper for auth/src/routes/login.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-e6688430a19a9c30f6bd18710b1cebcee430ae563e449f1a28223912be7f0f75)
 
-#### Reuse global signup helper for auth/src/routes/logout.test.ts
+#### [Reuse global signup helper for auth/src/routes/logout.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-0986c2c797aa46a34a1f03bc84affced3351b78850b94b247dd47f2583edce87)
 
 # Section 11
 
