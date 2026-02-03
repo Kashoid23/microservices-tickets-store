@@ -176,14 +176,14 @@ OAuth 2.0 is an industry-standard authorization framework used for delegated acc
 
 ```
 cd auth
-npm i cookie-session @types/cookie-session
+npm install cookie-session @types/cookie-session
 ```
 
 #### [Use cookieSession for auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/b5f6aeba59788b88df2fc588862ed78784dd7490#diff-0b5cb0a52d11370c3283ace8d2013a154bae71e8285809dd11eb4c4b1f6d34ab)
 
 ```
 cd auth
-npm i jsonwebtoken @types/jsonwebtoken
+npm install jsonwebtoken @types/jsonwebtoken
 ```
 
 #### [Generate a JWT auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/b5f6aeba59788b88df2fc588862ed78784dd7490#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
@@ -239,7 +239,7 @@ kubectl get secrets
 
 ```
 cd auth
-npm i --save-dev jest ts-jest @types/jest supertest @types/supertest mongodb-memory-server
+npm install --save-dev jest ts-jest @types/jest supertest @types/supertest mongodb-memory-server
 ```
 
 #### Avoid installing development dependencies by adding --omit=dev to auth/Dockerfile
@@ -268,3 +268,34 @@ npm run test
 #### Reuse global signup helper for auth/src/routes/login.test.ts
 
 #### Reuse global signup helper for auth/src/routes/logout.test.ts
+
+# Section 11
+
+## Client service
+
+Next.js is an open-source full-stack web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static rendering.
+
+```
+mkdir client
+cd client
+npm init -y
+npm install react react-dom next
+```
+
+#### Create client/.gitignore
+
+Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.
+
+```
+mkdir app
+```
+
+#### Create the root layout. It's required and must contain the <html> and <body> tags. client/app/layout.js
+
+#### Create a home page client/app/page.js with some initial content
+
+Both layout.js and page.js will be rendered when the user visits the root of application (/).
+
+#### Add dev script to run next server client/package.json
+
+> next dev: starts the development server using Turbopack (default bundler)
