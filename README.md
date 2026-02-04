@@ -196,43 +196,32 @@ kubectl get secrets
 ```
 
 #### [Set ENV var referred to Kubernetes secrets infra/k8s/auth-deployment.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-f14c2afe65dfa9fe19e5cc32ac5f5e704a13ff5fb521188f81389639a52fadd0)
-
 #### [Read JWT_SIGN ENV var auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/4edcf1fa6eb38d6208e21b763662928b633046fd#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
-
 #### [Formatting POST v1/users response auth/src/models/user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/57b52fb5103f4002bc0ace51cb5303f2c7e1a8d7#diff-f5f12a593a24caa2e2be6ca829c14399b70f7034f17ebecae45276505408cca8)
 
 ## Login
 
 #### [Add v1/login path to infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
-
 #### [Create shared validateRequest middleware auth/src/middlewares/validate-request.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-02706e89457f1d0459edc646920d2e2202ea1ae6aed9de555b11fb704e239521)
-
 #### [Init validateRequest middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
-
 #### [Check email, compare password, set JWT then return user auth/src/routes/login.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7d2da1acb3fc2f45e019eabb86e03e7f7ddaa9d3#diff-df9c77d948cce73ae30ce968c3134d7f3e3eeac30b320ebe394434735dc51ba0)
 
 ## Current user
 
 #### [Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/80a6d58061aa74576b0578f478c868efee6e0997#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
-
 #### [Create Current user middleware auth/src/middlewares/current-user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-8bcd7e79e2ce5408d9fc3196a06e09d6a59467bbdde6c6e4665ceae2d17970a9)
-
 #### [Use Current user middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
-
 #### [Create UnauthorizedError class auth/src/errors/unathorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
-
 #### [Create Authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-0999c87b30f8efd3998ec467880bcd9857fac96ed8aa370809f065431a5d0a0e)
 
 ## Logout
 
 #### [Add v1/logout path to infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
-
 #### [Destroying a session auth/src/routes/logout.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/de183b642c6f1dfd3d762d887528fde076e8d570#diff-b2af90c0eb5bfdae3a451a316cfb180eba9348514028e59f2f7e932ac6e183e0)
 
 # Section 10
 
 #### [Prepare reusable express app code for test ENV auth/src/app.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-5822d1c0ff56e61050b5e5a794c8a243db57453fca808d90b06309d522378dc8)
-
 #### [Update auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-0b5cb0a52d11370c3283ace8d2013a154bae71e8285809dd11eb4c4b1f6d34ab)
 
 #### Install <b>supertest</b> library to make fake requests to express app and <b>mongodb-memory-server</b> to start in-memory copy of MongoDB
@@ -243,17 +232,11 @@ npm install --save-dev jest ts-jest @types/jest supertest @types/supertest mongo
 ```
 
 #### [Avoid installing development dependencies by adding --omit=dev to auth/Dockerfile](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-e8d8092a4a6211281e55aba080af4f1802dffa3c5fc26fecd152edb378839668)
-
 #### [Include jest type auth/tsconfig.json](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-f264533bb08b34faaaddc7a524916a8ea45d2a084c2e1835faf121370d3e99b1)
-
 #### [Add test script and config to run jest auth/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-1a97c5e9f4f20ea92b2d3531765f1d9ab47e3f5551f2b2083180963d0791258e)
-
 #### [Test ENV setup auth/src/tests/setup.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-9d8d059495563ba61f40bdfdf36f12ed44f0b6a0d7d243d82c4653b568c86e47)
-
 #### [Cover users routes with tests auth/src/routes/users.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-57e1fd0c09c6564f67bb7c0b8a07f2225bc3109f50c8bf76e6e0e54636e2712a)
-
 #### [Cover login route with tests auth/src/routes/login.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-e6688430a19a9c30f6bd18710b1cebcee430ae563e449f1a28223912be7f0f75)
-
 #### [Cover logout route with tests auth/src/routes/logout.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/901804585ce1f02c9ad5995f292779e7c0aecd21#diff-0986c2c797aa46a34a1f03bc84affced3351b78850b94b247dd47f2583edce87)
 
 ```
@@ -262,11 +245,8 @@ npm run test
 ```
 
 #### [Define global signup helper to reduce duplicated tests code auth/src/tests/setup.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-9d8d059495563ba61f40bdfdf36f12ed44f0b6a0d7d243d82c4653b568c86e47)
-
 #### [Reuse global signup helper for auth/src/routes/users.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-57e1fd0c09c6564f67bb7c0b8a07f2225bc3109f50c8bf76e6e0e54636e2712a)
-
 #### [Reuse global signup helper for auth/src/routes/login.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-e6688430a19a9c30f6bd18710b1cebcee430ae563e449f1a28223912be7f0f75)
-
 #### [Reuse global signup helper for auth/src/routes/logout.test.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/32f300d06f64912c7e648804dd153ac96c0a44a9#diff-0986c2c797aa46a34a1f03bc84affced3351b78850b94b247dd47f2583edce87)
 
 # Section 11
@@ -291,7 +271,6 @@ mkdir app
 ```
 
 #### [Create the root layout client/app/layout.js. It's required and must contain the <html> and <body> tags](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-e1d364b134ff71aaa4eecaa01154f95274456b1d4a0db646c896ace897f65f26)
-
 #### [Create a home page client/app/page.js with some initial content](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-402ae0182ad4d90e6bf74e18b0d99bc0b61490f6abcb59b45d3b1f6cca3ba4f4)
 
 Both layout.js and page.js will be rendered when the user visits the root of application (/).
@@ -304,5 +283,10 @@ Both layout.js and page.js will be rendered when the user visits the root of app
 #### Create client/.dockerignore
 #### Create infra/k8s/client-deployment.yaml
 #### Create infra/k8s/client-service.yaml
-#### Update skaffold.yaml
 #### Update infra/k8s/ingress-service.yaml
+#### Update skaffold.yaml
+#### Create configuration file for Next.js client/next.config.js
+
+```
+skaffold dev
+```
