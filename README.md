@@ -299,3 +299,10 @@ Both layout.js and page.js will be rendered when the user visits the root of app
 #### [Add dev script to run next server client/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-1846122c2c83a486a3693f7966aa522c34cf489f674185c4da0d9221683fd81f)
 
 > next dev: starts the development server using Turbopack (default bundler)
+
+#### Create client/Dockerfile
+#### Create client/.dockerignore
+#### Create infra/k8s/client-deployment.yaml
+#### Create infra/k8s/client-service.yaml
+#### Update skaffold.yaml
+#### Update infra/k8s/ingress-service.yaml
