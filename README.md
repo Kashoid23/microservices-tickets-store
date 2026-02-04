@@ -281,13 +281,13 @@ Both layout.js and page.js will be rendered when the user visits the root of app
 
 > next dev: starts the development server using Turbopack (default bundler)
 
-#### Create client/Dockerfile
-#### Create client/.dockerignore
-#### Create infra/k8s/client-deployment.yaml
-#### Create infra/k8s/client-service.yaml
-#### Update infra/k8s/ingress-service.yaml
-#### Update skaffold.yaml
-#### Create configuration file for Next.js client/next.config.js
+#### [Create client/Dockerfile](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-c0a19429aa475a5c4fba2e72499771095a4d55a72adf8271238b2a402928b475)
+#### [Create client/.dockerignore](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-76887f59f534794e3609d98a28a8873a5217a54521eaf72a312156de15bc390f)
+#### [Create infra/k8s/client-deployment.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-13b9dbd21958814175cd33d9611f72383e27349692f5921d0b6e6bbecab9f268)
+#### [Create infra/k8s/client-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-4a2e54757a44b2db343f83c27ef8cf8cc89d074cb9c8e84010592f5a887ecaf3)
+#### [Update infra/k8s/ingress-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-9892cadf8fdba6a22e0c56f03faae1b2571c0d2df4f4556fc88ce161251f2bb2)
+#### [Update skaffold.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/9bf8f9f0a45fc3b5fe378b50b4dc9051d7029443#diff-cb88f836d7d2eec7bccbed73c47a452b8eb3e376b02bae73ecae449bba96214a)
+#### [Create configuration file for Next.js client/next.config.js](https://github.com/Kashoid23/microservices-tickets-store/commit/b4f05c9cd81664397cfbc371d3c6bfc6c92aeeab#diff-6a52ebdee5662eb75f6f3010d0aca4b33d708e85c7203d00cf50b1109480ae16)
 
 ```
 skaffold dev
@@ -299,7 +299,7 @@ skaffold dev
 npm install bootstrap
 ```
 
-#### Apply bootstrap client/app/layout.js
+#### [Apply bootstrap client/app/layout.js](https://github.com/Kashoid23/microservices-tickets-store/commit/f9e88cae9db721d78aec5dfbdf9aa4e3f74ba521#diff-e1d364b134ff71aaa4eecaa01154f95274456b1d4a0db646c896ace897f65f26)
 
 ## Server and Client Components
 
@@ -321,5 +321,5 @@ On the client (first load)
 npm install axios
 ```
 
-#### Create a Server Component client/app/auth/signup/page.js
-#### Create a Client Component client/app/auth/signup/SignUpForm.js
+#### [Create a Server Component client/app/auth/signup/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/87191bac4f53d7e963030272743d80d12ba64a56#diff-8c267a5c3a15fc48cb82d67dc91c02a7c745b0919adb81557638af3bdd00f372)
+#### [Create a Client Component client/app/auth/signup/SignUpForm.js](https://github.com/Kashoid23/microservices-tickets-store/commit/87191bac4f53d7e963030272743d80d12ba64a56#diff-afe34089696e1db001f03788b6bdd61feba8f54eb35a6428dd281f2f8b472ed5)
