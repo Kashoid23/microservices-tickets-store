@@ -251,9 +251,11 @@ npm run test
 
 # Section 11
 
-## Client service
+## Client service with SSR
 
 Next.js is an open-source full-stack web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static rendering.
+
+https://nextjs.org/docs/app/getting-started
 
 ```
 mkdir client
@@ -264,18 +266,18 @@ npm install react react-dom next
 
 #### [Create client/.gitignore](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-f8fc230f40372bc0cc3003a0913de478a6b6cd220762e6896942c383730974c8)
 
-Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.
-
 ```
 mkdir app
 ```
+
+Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.
 
 #### [Create the root layout client/app/layout.js. It's required and must contain the <html> and <body> tags](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-e1d364b134ff71aaa4eecaa01154f95274456b1d4a0db646c896ace897f65f26)
 #### [Create a home page client/app/page.js with some initial content](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-402ae0182ad4d90e6bf74e18b0d99bc0b61490f6abcb59b45d3b1f6cca3ba4f4)
 
 Both layout.js and page.js will be rendered when the user visits the root of application (/).
 
-#### [Add dev script to run next server client/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-1846122c2c83a486a3693f7966aa522c34cf489f674185c4da0d9221683fd81f)
+#### [Set type module and add dev script to run next server client/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/6cc440be6ad20bac99a4bbee52db2675fbbac89c#diff-1846122c2c83a486a3693f7966aa522c34cf489f674185c4da0d9221683fd81f)
 
 > next dev: starts the development server using Turbopack (default bundler)
 
@@ -291,10 +293,33 @@ Both layout.js and page.js will be rendered when the user visits the root of app
 skaffold dev
 ```
 
-#### Add global CSS
+## Global CSS
 
 ```
 npm install bootstrap
 ```
 
 #### Apply bootstrap client/app/layout.js
+
+## Server and Client Components
+
+> Server Components: Use for static content, data fetching, and SEO-friendly elements.
+
+> Client Components: Use for interactive elements that require state, effects, or browser APIs.
+
+By default, layouts and pages are Server Components, which lets you fetch data and render parts of your UI on the server, optionally cache the result, and stream it to the client.
+
+To declare an entry point for the Client Components, add the 'use client' directive at the top of the file, before any imports
+
+On the client (first load)
+
+1. HTML is used to immediately show a fast non-interactive preview of the route to the user.
+2. RSC (React Server Component) Payload is used to reconcile the Client and Server Component trees.
+3. JavaScript is used to hydrate Client Components and make the application interactive.
+
+```
+npm install axios
+```
+
+#### Create a Server Component client/app/auth/signup/page.js
+#### Create a Client Component client/app/auth/signup/SignUpForm.js
