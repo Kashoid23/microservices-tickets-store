@@ -290,3 +290,11 @@ Both layout.js and page.js will be rendered when the user visits the root of app
 ```
 skaffold dev
 ```
+
+#### Add global CSS
+
+```
+npm install bootstrap
+```
+
+#### Apply bootstrap client/app/layout.js
