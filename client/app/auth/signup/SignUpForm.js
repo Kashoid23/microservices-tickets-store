@@ -1,24 +1,30 @@
 'use client'
 
 import { useState } from 'react'
-import axios from 'axios'
+import { useRouter } from 'next/navigation';
+
+import { useRequest } from '../../src/hooks/use-request';
  
 export default function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [errors, setErrors] = useState([]);
+    const router = useRouter();
+    const { doRequest, errors } = useRequest({
+        url: '/v1/users',
+        method: 'post',
+        body: {
+            email,
+            password
+        },
+        onSuccess: () => {
+            router.push("/");
+        }
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('/v1/users', { email, password })
-            .then(response => {
-                setEmail("");
-                setPassword("");
-            })
-            .catch(error => {
-                setErrors(error.response.data.errors);
-            });
+        doRequest();
     };
 
     return <form className="mt-5 w-25 mx-auto">
@@ -31,13 +37,7 @@ export default function SignUp() {
             <label htmlFor="password">Password</label>
             <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        {errors.length > 0 && (
-            <div className="alert alert-danger">
-                <ul className="mb-0">
-                    {errors.map((err, index) => <li key={index}>{err.message}</li>)}
-                </ul>
-            </div>
-        )}
+        {errors}
         <div className="float-end">
             <button type="submit" onClick={handleSubmit} className="btn btn-primary">Sign Up</button>
         </div>

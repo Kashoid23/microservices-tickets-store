@@ -323,3 +323,8 @@ npm install axios
 
 #### [Create a Server Component client/app/auth/signup/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/87191bac4f53d7e963030272743d80d12ba64a56#diff-8c267a5c3a15fc48cb82d67dc91c02a7c745b0919adb81557638af3bdd00f372)
 #### [Create a Client Component client/app/auth/signup/SignUpForm.js](https://github.com/Kashoid23/microservices-tickets-store/commit/87191bac4f53d7e963030272743d80d12ba64a56#diff-afe34089696e1db001f03788b6bdd61feba8f54eb35a6428dd281f2f8b472ed5)
+
+#### Create custom hook for requests handling client/app/src/hooks/use-request.js
+#### Use useRequest with redirect after a successful response client/app/auth/signup/SignUpForm.js
+
+> <b>useRouter</b> allows to programmatically change routes from Client Components. For Server Components, we would <b>redirect()</b> instead.
