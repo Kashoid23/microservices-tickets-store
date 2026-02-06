@@ -28,9 +28,7 @@ export default async function Layout({ children }) {
                     <header className="navbar navbar-light bg-light">
                         <div className="container">
                             <h1 className="navbar-brand">Tickets Store</h1>
-                            <div>
-                                <Header />
-                            </div>
+                            <Header />
                         </div>
                     </header>
                     {children}
