@@ -22,7 +22,10 @@ export const currentUser = (req: Request, res: Response, next: NextFunction) => 
     try {
         const payload = jwt.verify(req.session.jwt, process.env.JWT_SIGN!) as UserPayload;
 
-        req.currentUser = payload;
+        req.currentUser = {
+            email: payload.email,
+            id: payload.id,
+        };
     } catch (err) {}
 
     next();

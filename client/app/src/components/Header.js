@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAuth } from '../context/auth';
 
 export default function Header() {
-    const currentUser = useAuth();
+    const { currentUser } = useAuth();
 
     return <header className="navbar navbar-light bg-light">
         <div className="container">
