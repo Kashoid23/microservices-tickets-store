@@ -336,3 +336,5 @@ npm install axios
 #### Create auth context client/app/src/context/auth.js
 #### Fetch currentUser and share with AuthProvider client/app/layout.js
 #### Create shared nav bar client/app/src/components/Header.js
+#### Create Logout Server component client/app/auth/logout/page.js
+#### Create Logout Client component client/app/src/components/Logout.js
