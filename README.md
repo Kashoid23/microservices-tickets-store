@@ -328,3 +328,5 @@ npm install axios
 #### [Use useRequest with redirect after a successful response client/app/auth/signup/SignUpForm.js](https://github.com/Kashoid23/microservices-tickets-store/commit/1bf97624fea00df32f45166f8d91f317ce7df0af#diff-afe34089696e1db001f03788b6bdd61feba8f54eb35a6428dd281f2f8b472ed5)
 
 > <b>useRouter</b> allows to programmatically change routes from Client Components. For Server Components, we would <b>redirect()</b> instead.
+
+#### Fetch currentUser from NextJS Server component client/app/page.js
