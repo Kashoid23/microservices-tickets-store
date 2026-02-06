@@ -329,12 +329,12 @@ npm install axios
 
 > <b>useRouter</b> allows to programmatically change routes from Client Components. For Server Components, we would <b>redirect()</b> instead.
 
-#### Create shared Form component client/app/src/components/Form.js
-#### Reuse shared Form for SignUpForm component client/app/src/components/SignUpForm.js
-#### Create LoginForm Client component client/app/src/components/LoginForm.js
-#### Create Login Server component client/app/auth/login/page.js
-#### Create auth context client/app/src/context/auth.js
-#### Fetch currentUser and share with AuthProvider client/app/layout.js
-#### Create shared nav bar client/app/src/components/Header.js
-#### Create Logout Server component client/app/auth/logout/page.js
-#### Create Logout Client component client/app/src/components/Logout.js
+#### [Create shared Form component client/app/src/components/Form.js](https://github.com/Kashoid23/microservices-tickets-store/commit/394a8639edb324007827e8102f2788e428512203#diff-4ba995fc153db6ea21790e2d64d6a2094e4ee9797811def6a7e3f2dc3bcd6f5b)
+#### [Reuse shared Form for SignUpForm component client/app/src/components/SignUpForm.js](https://github.com/Kashoid23/microservices-tickets-store/commit/394a8639edb324007827e8102f2788e428512203#diff-986032c27037860fc965bc6739bf66753a1ff4012406f563289aea9f2b04abcd)
+#### [Create LoginForm Client component client/app/src/components/LoginForm.js](https://github.com/Kashoid23/microservices-tickets-store/commit/394a8639edb324007827e8102f2788e428512203#diff-938ef214e93ebf844b5c9d75291fcdfcbaa8d07758aef7dc4f916d2687f52287)
+#### [Create Login Server component client/app/auth/login/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/394a8639edb324007827e8102f2788e428512203#diff-3a7f620e515dc319f3c99953dc67af5741741993625b68222687029778bba57a)
+#### [Create auth context client/app/src/context/auth.js](https://github.com/Kashoid23/microservices-tickets-store/commit/a22d1e797dd3edfe4c9a140e8794f28b34732382#diff-071e9199e285645effb7a6d2d6f874cadd6887a22cae0f3665419cc0855a98f3)
+#### [Fetch currentUser and share with AuthProvider client/app/layout.js](https://github.com/Kashoid23/microservices-tickets-store/commit/a22d1e797dd3edfe4c9a140e8794f28b34732382#diff-e1d364b134ff71aaa4eecaa01154f95274456b1d4a0db646c896ace897f65f26)
+#### [Create shared nav bar client/app/src/components/Header.js](https://github.com/Kashoid23/microservices-tickets-store/commit/a22d1e797dd3edfe4c9a140e8794f28b34732382#diff-812476993f7ca34f6ec9f330650caf177ba21370d54ba2da6d5877ba263f3d7d)
+#### [Create Logout Server component client/app/auth/logout/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-d6b4889cac3a02725f725d8bc17cd5cffca4a0c41bf185ce537e30261f71644a)
+#### [Create Logout Client component client/app/src/components/Logout.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-99721f9aa47768a094a770f9fc6865100ab07865640bbf46e4ee2f919267326c)
