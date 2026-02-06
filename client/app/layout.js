@@ -25,7 +25,14 @@ export default async function Layout({ children }) {
         <html>
             <body>
                 <AuthProvider currentUser={currentUser}>
-                    <Header />
+                    <header className="navbar navbar-light bg-light">
+                        <div className="container">
+                            <h1 className="navbar-brand">Tickets Store</h1>
+                            <div>
+                                <Header />
+                            </div>
+                        </div>
+                    </header>
                     {children}
                 </AuthProvider>
             </body>
