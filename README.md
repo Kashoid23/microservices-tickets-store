@@ -329,4 +329,4 @@ npm install axios
 
 > <b>useRouter</b> allows to programmatically change routes from Client Components. For Server Components, we would <b>redirect()</b> instead.
 
-#### Fetch currentUser from NextJS Server component client/app/page.js
+#### [Fetch currentUser from NextJS Server component client/app/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/88c9655537ceee08b340210141b44921e4222bd0#diff-402ae0182ad4d90e6bf74e18b0d99bc0b61490f6abcb59b45d3b1f6cca3ba4f4)
