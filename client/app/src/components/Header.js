@@ -15,8 +15,13 @@ export default function Header() {
         <div>
             {currentPathname === "/auth/login" ? (
                 <Link href="/auth/signup" className="btn btn-primary">Sign Up</Link>
-            ) : (
+            ) : currentPathname === "/auth/signup" ? (
                 <Link href="/auth/login" className="btn btn-primary">Login</Link>
+            ) : (
+                <>
+                    <Link href="/auth/login" className="btn btn-primary">Login</Link>
+                    <Link href="/auth/signup" className="btn btn-primary ms-2">Sign Up</Link>
+                </>
             )}
         </div>
     )
