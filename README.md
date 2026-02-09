@@ -339,6 +339,8 @@ npm install axios
 #### [Create Logout Server component client/app/auth/logout/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-d6b4889cac3a02725f725d8bc17cd5cffca4a0c41bf185ce537e30261f71644a)
 #### [Create Logout Client component client/app/src/components/Logout.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-99721f9aa47768a094a770f9fc6865100ab07865640bbf46e4ee2f919267326c)
 
+#### [Move client/src folder outside app router top-level folder](https://github.com/Kashoid23/microservices-tickets-store/commit/969234bd4e8253e392728176febff11225e8d8c6)
+
 # Section 12
 
 ## Share code with NPM lib
