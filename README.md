@@ -353,12 +353,12 @@ npm install typescript del-cli --save-dev
 npx tsc --init
 ```
 
-#### Create common/.gitignore
+#### [Create common/.gitignore](https://github.com/Kashoid23/microservices-tickets-store/commit/200b228b7172da54985e0d29587d33ef7bd71180#diff-79c271f2a7de1c47c8a484fadf4c067b19f6fbc28a181aaef2ec0af085f61c25)
 #### Move auth/src/errors to common/src/errors
 #### Move auth/src/middlewares to common/src/middlewares
-#### Create common/src/index.ts
-#### Set verbatimModuleSyntax to false and uncomment outDir common/tsconfig.json
-#### Update common/package.json
+#### [Create common/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/200b228b7172da54985e0d29587d33ef7bd71180#diff-5857a8751606a48152b72644a01e184e3f9ddbd995c17f9e402c522c861c309a)
+#### [Set verbatimModuleSyntax to false and uncomment outDir common/tsconfig.json](https://github.com/Kashoid23/microservices-tickets-store/commit/200b228b7172da54985e0d29587d33ef7bd71180#diff-f31d2204be36e0cd955bd160922c36da16b2419a676b02dd254aa5768f2c1f60)
+#### [Update common/package.json](https://github.com/Kashoid23/microservices-tickets-store/commit/200b228b7172da54985e0d29587d33ef7bd71180#diff-64f4c910941bc67104132335ffea4e23bc41dc57d9a0a7cdbe2094d93759d7be)
 
 #### Install all related dependencies
 
