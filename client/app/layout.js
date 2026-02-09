@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { headers } from "next/headers";
 
-import { AuthProvider } from './src/context/auth';
-import Header from './src/components/Header';
+import { AuthProvider } from '../src/context/auth';
+import Header from '../src/components/Header';
 
 async function getCurrentUser() {
     try {
