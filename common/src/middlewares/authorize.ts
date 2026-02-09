@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-import { UnauthorizedError } from "../errors/unathorized-error";
+import { UnauthorizedError } from "../errors/unauthorized-error";
 
 export const authorize = (req: Request, res: Response, next: NextFunction) => {
     if (!req.currentUser) {

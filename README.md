@@ -211,7 +211,7 @@ kubectl get secrets
 #### [Check session.jwt, verify JWT and return JWT payload or null as currentUser auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/80a6d58061aa74576b0578f478c868efee6e0997#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
 #### [Create Current user middleware auth/src/middlewares/current-user.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-8bcd7e79e2ce5408d9fc3196a06e09d6a59467bbdde6c6e4665ceae2d17970a9)
 #### [Use Current user middleware auth/src/routes/users.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/7bb73c8a5f275afbbfd7ce19e3f7cd245ff09232#diff-9bd98c0e24c2e12c87aa3ea930bbb20797fc5791ab7dd316013e325eb0279eef)
-#### [Create UnauthorizedError class auth/src/errors/unathorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
+#### [Create UnauthorizedError class auth/src/errors/unauthorized-error.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-53b3ed0e581cb18f3ab1f908353dadbee25f0d3b3b479d58d9fc0345dd0f5d25)
 #### [Create Authorize middleware to handle unauthorized requests auth/src/middlewares/authorize.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/0a1ee06931a0604aa03803fa740a73a6bb591565#diff-0999c87b30f8efd3998ec467880bcd9857fac96ed8aa370809f065431a5d0a0e)
 
 ## Logout
@@ -338,3 +338,57 @@ npm install axios
 #### [Create shared nav bar client/app/src/components/Header.js](https://github.com/Kashoid23/microservices-tickets-store/commit/a22d1e797dd3edfe4c9a140e8794f28b34732382#diff-812476993f7ca34f6ec9f330650caf177ba21370d54ba2da6d5877ba263f3d7d)
 #### [Create Logout Server component client/app/auth/logout/page.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-d6b4889cac3a02725f725d8bc17cd5cffca4a0c41bf185ce537e30261f71644a)
 #### [Create Logout Client component client/app/src/components/Logout.js](https://github.com/Kashoid23/microservices-tickets-store/commit/373afddd4e7e7dbce53f26ecdb97f81fa9c56172#diff-99721f9aa47768a094a770f9fc6865100ab07865640bbf46e4ee2f919267326c)
+
+# Section 12
+
+## Share code with NPM lib
+
+#### Create organization https://www.npmjs.com/org/create
+
+```
+mkdir common
+cd common
+npm init -y
+npm install typescript del-cli --save-dev
+npx tsc --init
+```
+
+#### Create common/.gitignore
+#### Move auth/src/errors to common/src/errors
+#### Move auth/src/middlewares to common/src/middlewares
+#### Create common/src/index.ts
+#### Set verbatimModuleSyntax to false and uncomment outDir common/tsconfig.json
+#### Update common/package.json
+
+#### Install all related dependencies
+
+```
+npm install typescript @types/express express express-validator @types/cookie-session cookie-session @types/jsonwebtoken jsonwebtoken --save-dev
+```
+
+#### Transcompile TS to plain JavaScript
+
+```
+npm run build
+```
+
+#### Publish package
+
+```
+npm publish --access public
+```
+
+#### Update package version before publish
+
+```
+npm version patch
+```
+
+## Use common package
+
+```
+cd auth
+npm install @organization/common@latest
+```
+
+#### Update import for used errors and middlewares modules in auth/src

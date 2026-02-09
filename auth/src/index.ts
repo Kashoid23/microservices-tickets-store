@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
+import { DatabaseConnectionError } from '@kashoid/common';
 
 import { app } from './app';
-import { DatabaseConnectionError } from './errors/database-connection-error';
 
 const start = async () => {
     try {
