@@ -3,9 +3,13 @@
 ```
 Init Node.js (TypeScript) project
 ↓
-Install dependencies
+Install dependencies (e.g. typescript, express, ts-node-dev)
+↓
+Config package.json tsconfig.json
 ↓
 Create entrypoint file src/index.ts
+↓
+Config express src/app.ts
 ↓
 Create Dockerfile config
 ↓
@@ -13,7 +17,7 @@ Create Kubernetes configs (Deployment, Service)
 ↓
 Create skaffold.yml config
 ↓
-Create & connect MongoDB service
+Create & connect MongoDB Service
 ```
 
 ## Auth service
