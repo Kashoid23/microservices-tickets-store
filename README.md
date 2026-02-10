@@ -1,5 +1,21 @@
 # Section 5
 
+```
+Init Node.js (TypeScript) project
+↓
+Install dependencies
+↓
+Create entrypoint file src/index.ts
+↓
+Create Dockerfile config
+↓
+Create Kubernetes configs (Deployment, Service)
+↓
+Create skaffold.yml config
+↓
+Create & connect MongoDB service
+```
+
 ## Auth service
 
 ```
@@ -8,10 +24,6 @@ cd auth
 npm init -y
 npm install express @types/express typescript ts-node-dev
 npx tsc --init
-```
-
-```
-mkdir src
 ```
 
 #### [Create auth/src/index.ts](https://github.com/Kashoid23/microservices-tickets-store/commit/717dcb7126a90f6d665a27c64920077da52ac020#diff-0b5cb0a52d11370c3283ace8d2013a154bae71e8285809dd11eb4c4b1f6d34ab)
@@ -394,3 +406,7 @@ npm install @organization/common@latest
 ```
 
 #### Update import for used errors and middlewares modules in auth/src
+
+# Section 13
+
+## Setup Tickets service
