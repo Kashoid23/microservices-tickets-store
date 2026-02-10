@@ -410,3 +410,5 @@ npm install @organization/common@latest
 # Section 13
 
 ## Setup Tickets service
+
+#### Create MONGODB_URI env var
