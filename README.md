@@ -5,7 +5,7 @@ Init Node.js (TypeScript) project
 ↓
 Install dependencies (e.g. typescript, express, ts-node-dev)
 ↓
-Config package.json tsconfig.json
+Config package.json and tsconfig.json
 ↓
 Create entrypoint file src/index.ts
 ↓
@@ -415,4 +415,4 @@ npm install @organization/common@latest
 
 ## Setup Tickets service
 
-#### Create MONGODB_URI env var
+#### [Create MONGODB_URI env var](https://github.com/Kashoid23/microservices-tickets-store/commit/2ac763520c9de8191f4b4d551354e7939ba04e4c)
