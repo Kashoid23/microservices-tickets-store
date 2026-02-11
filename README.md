@@ -417,10 +417,5 @@ npm install @organization/common@latest
 
 #### [Create MONGODB_URI env var](https://github.com/Kashoid23/microservices-tickets-store/commit/2ac763520c9de8191f4b4d551354e7939ba04e4c)
 
-#### Create createTicketRouter tickets/src/routes/new.ts
-#### Use createTicketRouter tickets/src/app.ts
-#### Create mockedCookie tickets/src/tests/setup.ts
-#### Cover createTicketRouter with tests tickets/src/routes/new.test.ts
-#### Create ticket schema and model tickets/src/models/ticket.ts
-#### Save ticket to MongoDB tickets/src/routes/new.ts
-#### Check response after creation tickets/src/routes/new.test.ts
+#### [Create new ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/4863e3e172e47510187e16e0384ed32964e3f0a7)
+#### [Save ticket to MongoDB](https://github.com/Kashoid23/microservices-tickets-store/commit/d98a08d002660035c59b182aca998166c98ded51)
