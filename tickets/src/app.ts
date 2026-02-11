@@ -5,6 +5,7 @@ import { errorHandler, NotFoundError } from '@kashoid/common';
 
 import { createTicketRouter } from './routes/new';
 import { showTicketRouter } from './routes/show';
+import { indexTicketRouter } from './routes';
 
 const app = express();
 app.set('trust proxy', true);
@@ -16,6 +17,7 @@ app.use(cookieSession({
 
 app.use(createTicketRouter);
 app.use(showTicketRouter);
+app.use(indexTicketRouter);
 
 app.use((req, res) => {
   throw new NotFoundError();
