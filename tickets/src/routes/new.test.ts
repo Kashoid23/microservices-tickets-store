@@ -24,7 +24,7 @@ describe('New ticket route', () => {
     it('returns a 401 when not authenticated', async () => {
         const response = await request(app)
             .post('/v1/tickets')
-            .send({});
+            .send();
 
         expect(response.status).toEqual(401);
     });
