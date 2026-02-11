@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 import { validateRequest, currentUser, authorize } from '@kashoid/common';
+import { Ticket } from '../models/ticket';
 
 const router = express.Router();
 
@@ -13,7 +14,16 @@ authorize,
 ],
 validateRequest,
 async (req: Request, res: Response) => {
-    res.status(201).send({});
+    const { title, price } = req.body;
+
+    const newTicket = Ticket.build({
+        title,
+        price,
+        userId: req.currentUser!.id
+    });
+    await newTicket.save();
+
+    res.status(201).send(newTicket);
 });
 
 export { router as createTicketRouter };

@@ -3,24 +3,30 @@ import request from 'supertest';
 import { app } from '../app';
 
 describe('New ticket route', () => {
-    it('returns a 401 when not authenticated', async () => {
-        const response = await request(app)
-            .post('/v1/tickets')
-            .send({});
-
-        expect(response.status).toEqual(401);
-    });
-
-    it('returns a 201 when authenticated', async () => {
+    it('returns a ticket after creation', async () => {
         const response = await request(app)
             .post('/v1/tickets')
             .set('Cookie', mockedCookie())
             .send({
                 title: 'Title',
                 price: 10
-            });
+            })
+            .expect(201);
 
-        expect(response.status).toEqual(201);
+        expect(response.body).toEqual({
+            title: 'Title',
+            price: 10,
+            userId: expect.any(String),
+            id: expect.any(String)
+        })
+    });
+
+    it('returns a 401 when not authenticated', async () => {
+        const response = await request(app)
+            .post('/v1/tickets')
+            .send({});
+
+        expect(response.status).toEqual(401);
     });
 
     it('returns a 400 when titte is invalid', async () => {

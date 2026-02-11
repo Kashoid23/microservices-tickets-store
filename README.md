@@ -421,3 +421,6 @@ npm install @organization/common@latest
 #### Use createTicketRouter tickets/src/app.ts
 #### Create mockedCookie tickets/src/tests/setup.ts
 #### Cover createTicketRouter with tests tickets/src/routes/new.test.ts
+#### Create ticket schema and model tickets/src/models/ticket.ts
+#### Save ticket to MongoDB tickets/src/routes/new.ts
+#### Check response after creation tickets/src/routes/new.test.ts
