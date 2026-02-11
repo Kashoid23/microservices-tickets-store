@@ -1,9 +1,11 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 import { beforeAll, beforeEach, afterAll } from '@jest/globals';
-import request from 'supertest';
+import jwt from 'jsonwebtoken';
 
-import { app } from '../app';
+declare global {
+    function mockedCookie(): string[];
+}
 
 let mongo: MongoMemoryServer;
 
@@ -33,3 +35,15 @@ afterAll(async () => {
 
     await mongoose.connection.close();
 });
+
+global.mockedCookie = () => {
+    const payload = {
+        id: new mongoose.Types.ObjectId().toHexString(),
+        email: 'test@example.com'
+    };
+    const token = jwt.sign(payload, process.env.JWT_SIGN!);
+    const session = { jwt: token };
+    const base64 = Buffer.from(JSON.stringify(session)).toString('base64');
+
+    return [`session=${base64}`];
+};
