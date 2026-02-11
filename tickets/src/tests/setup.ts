@@ -4,7 +4,7 @@ import { beforeAll, beforeEach, afterAll } from '@jest/globals';
 import jwt from 'jsonwebtoken';
 
 declare global {
-    function mockedCookie(): string[];
+    function mockedCookie(userId?: string): string[];
 }
 
 let mongo: MongoMemoryServer;
@@ -36,9 +36,9 @@ afterAll(async () => {
     await mongoose.connection.close();
 });
 
-global.mockedCookie = () => {
+global.mockedCookie = (userId?: string) => {
     const payload = {
-        id: new mongoose.Types.ObjectId().toHexString(),
+        id: userId || new mongoose.Types.ObjectId().toHexString(),
         email: 'test@example.com'
     };
     const token = jwt.sign(payload, process.env.JWT_SIGN!);

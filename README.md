@@ -421,3 +421,4 @@ npm install @organization/common@latest
 #### [Save ticket to MongoDB](https://github.com/Kashoid23/microservices-tickets-store/commit/d98a08d002660035c59b182aca998166c98ded51)
 #### Create show ticket endpoint
 #### Create index ticket endpoint
+#### Create edit ticket endpoint
