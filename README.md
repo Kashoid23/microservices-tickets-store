@@ -418,7 +418,7 @@ npm install @organization/common@latest
 #### [Create MONGODB_URI env var](https://github.com/Kashoid23/microservices-tickets-store/commit/2ac763520c9de8191f4b4d551354e7939ba04e4c)
 
 #### [Create new ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/4863e3e172e47510187e16e0384ed32964e3f0a7)
-#### [Save ticket to MongoDB](https://github.com/Kashoid23/microservices-tickets-store/commit/d98a08d002660035c59b182aca998166c98ded51)
-#### Create show ticket endpoint
-#### Create index ticket endpoint
-#### Create edit ticket endpoint
+#### [Create Ticket Schema and Model. Save ticket to MongoDB](https://github.com/Kashoid23/microservices-tickets-store/commit/d98a08d002660035c59b182aca998166c98ded51)
+#### [Create show ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/03ee78be52a3d968f622d9897515d74c184283d5)
+#### [Create index ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/84d5afc106115f326689d064a159f42e37826f63)
+#### [Create edit ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/78b078e6da30ef880420080d8abb52f70563c970)
