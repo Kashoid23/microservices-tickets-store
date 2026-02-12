@@ -437,8 +437,8 @@ By default the NATS server exposes multiple ports
 - 8222 is an HTTP management port for information reporting
 - 6222 is a routing port for clustering
 
-Create infra/k8s/nats-deployment.yaml
-Create infra/k8s/nats-service.yaml
+#### [Create infra/k8s/nats-deployment.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/de8429f7440f7cc4be24ea80d06e04eac1260bf1#diff-55af18a8aa178a59cb67b7d15e7cbc7a27ba0664dc029e8ea55de3a33d2862ca)
+#### [Create infra/k8s/nats-service.yaml](https://github.com/Kashoid23/microservices-tickets-store/commit/de8429f7440f7cc4be24ea80d06e04eac1260bf1#diff-cc8a9aca454dc42791dac89904cfb48104b41fe4315319596bec4f4a0daa6f04)
 
 ```
 docker pull nats
