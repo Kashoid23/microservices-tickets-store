@@ -422,3 +422,28 @@ npm install @organization/common@latest
 #### [Create show ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/03ee78be52a3d968f622d9897515d74c184283d5)
 #### [Create index ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/84d5afc106115f326689d064a159f42e37826f63)
 #### [Create edit ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/78b078e6da30ef880420080d8abb52f70563c970)
+
+# Section 13
+
+## NATS JetStream (modern version of deprecated NATS Streaming Server)
+
+> NATS has a built-in persistence engine called JetStream which enables messages to be stored and replayed at a later time. Unlike NATS Core which requires you to have an active subscription to process messages as they happen, JetStream allows the NATS server to capture messages and replay them to consumers as needed.
+
+Used Docker Image: https://hub.docker.com/_/nats
+
+By default the NATS server exposes multiple ports
+
+- 4222 is for clients
+- 8222 is an HTTP management port for information reporting
+- 6222 is a routing port for clustering
+
+Create infra/k8s/nats-deployment.yaml
+Create infra/k8s/nats-service.yaml
+
+```
+docker pull nats
+```
+
+```
+skaffold dev
+```
