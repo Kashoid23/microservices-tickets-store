@@ -423,7 +423,7 @@ npm install @organization/common@latest
 #### [Create index ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/84d5afc106115f326689d064a159f42e37826f63)
 #### [Create edit ticket endpoint](https://github.com/Kashoid23/microservices-tickets-store/commit/78b078e6da30ef880420080d8abb52f70563c970)
 
-# Section 13
+# Section 14
 
 ## NATS JetStream (modern version of deprecated NATS Streaming Server)
 
